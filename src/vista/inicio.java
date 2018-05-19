@@ -30,9 +30,10 @@ public class inicio extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        menucrear = new javax.swing.JMenuItem();
+        menusalir = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -49,16 +50,19 @@ public class inicio extends javax.swing.JFrame {
 
         jMenu1.setText("Nuevo");
 
-        jMenuItem1.setText("Crear Usuario");
-        jMenu1.add(jMenuItem1);
+        menucrear.setText("Crear Usuario");
+        jMenu1.add(menucrear);
 
-        jMenuItem2.setText("Salir");
-        jMenu1.add(jMenuItem2);
+        menusalir.setText("Salir");
+        jMenu1.add(menusalir);
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Configuracion");
+        jMenu2.setText("Reportes");
         jMenuBar1.add(jMenu2);
+
+        jMenu3.setText("Opciones");
+        jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
 
@@ -114,9 +118,10 @@ public class inicio extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel1;
+    public javax.swing.JMenuItem menucrear;
+    public javax.swing.JMenuItem menusalir;
     // End of variables declaration//GEN-END:variables
 }

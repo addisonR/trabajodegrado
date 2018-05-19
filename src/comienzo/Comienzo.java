@@ -15,6 +15,7 @@ public class Comienzo {
         modelo.iniciosesion in=new iniciosesion();
         modelo.bdatos bd=new bdatos();
         controlador.coniniciosesion con=new coniniciosesion(in, view, co, bd, rc);
+        controlador.iniciocontroller icon=new iniciocontroller();
         
         view.setVisible(true);
         view.setTitle("Inicio Sesion");
