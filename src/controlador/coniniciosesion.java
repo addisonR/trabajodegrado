@@ -1,16 +1,10 @@
 
 package controlador;
-import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.sql.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JFrame;
-import static javax.swing.JFrame.EXIT_ON_CLOSE;
 import javax.swing.JOptionPane;
 import modelo.*;
 import vista.*;
@@ -30,12 +24,7 @@ public class coniniciosesion implements ActionListener{
         this.bd = bd;
         this.rc = rc;
         this.in.btentrar.addActionListener(this);
-        in.recontraseña.addMouseListener(new MouseAdapter() {
-            public void mouseClicked(MouseEvent e){
-                rc.setVisible(true);
-                in.dispose();
-            }
-        });
+        click();
     }
     
     public void iniciosesion(){
@@ -59,7 +48,7 @@ public class coniniciosesion implements ActionListener{
                 JOptionPane.showMessageDialog(null, "usuario o contraseña erronea");
             }
         } catch (SQLException ex) {
-            Logger.getLogger(coniniciosesion.class.getName()).log(Level.SEVERE, null, ex);
+            
         }
     }
 
@@ -72,4 +61,14 @@ public class coniniciosesion implements ActionListener{
         }
     }
     
-}
+    public void click(){
+        in.recontraseña.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e){
+                rc.setVisible(true);
+                in.dispose();                
+            }
+        });
+    }
+    
+    }
